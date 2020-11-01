@@ -8,12 +8,6 @@
 .btn {
   border-radius: 20px;
 }
-.buttons {
-  position: relative;
-}
-.btn-translateToNewari {
-  position: absolute;
-  bottom: 0;
-  left: 14px;
-  width: 160px;
+.btn-translate {
+  margin-top: 50px;
 }

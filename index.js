@@ -28,14 +28,10 @@ document.getElementById("btn-translateToNewari").addEventListener("click", (e) =
   console.log(englishWord);
   // BE needs an identifier for translation from and to
   if (englishWord && englishWord.trim().length) {
-    const postData = { text: englishWord.trim() };
-    fetch(baseUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(postData),
-    })
+    const word = englishWord.trim();
+    const to = 'NW';
+    const url = `${baseUrl}?word=${word}?to={to}`;
+    fetch(url)
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
