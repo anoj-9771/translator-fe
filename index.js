@@ -30,7 +30,7 @@ document.getElementById("btn-translateToNewari").addEventListener("click", (e) =
   if (englishWord && englishWord.trim().length) {
     const word = englishWord.trim();
     const to = 'NW';
-    const url = `${baseUrl}?word=${word}?to={to}`;
+    const url = `${baseUrl}?word=${word}?to=${to}`;
     fetch(url)
     .then(response => response.json())
     .then(data => {
