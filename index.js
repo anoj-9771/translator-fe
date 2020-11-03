@@ -1,5 +1,4 @@
-const baseUrl = 'https://hhxgkiy54l.execute-api.ap-southeast-2.amazonaws.com/stg/transactions';
-
+const baseUrl = 'https://hhxgkiy54l.execute-api.ap-southeast-2.amazonaws.com/stg/translations';
 document.getElementById('btn-translateToEnglish').addEventListener('click', (e) => {
   const newariWord = document.getElementById('newariInput').value;
   console.log(newariWord);
