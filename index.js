@@ -1,4 +1,4 @@
-const baseUrl = 'http://13.211.160.11:6000/translate';
+const baseUrl = 'https://hhxgkiy54l.execute-api.ap-southeast-2.amazonaws.com/stg/transactions';
 
 document.getElementById('btn-translateToEnglish').addEventListener('click', (e) => {
   const newariWord = document.getElementById('newariInput').value;
@@ -29,8 +29,8 @@ document.getElementById("btn-translateToNewari").addEventListener("click", (e) =
   // BE needs an identifier for translation from and to
   if (englishWord && englishWord.trim().length) {
     const word = englishWord.trim();
-    const to = 'NW';
-    const url = `${baseUrl}?word=${word}&to=${to}`;
+    const to = 'newari';
+    const url = `${baseUrl}?engword=${word}`;
     fetch(url)
     .then(response => response.json())
     .then(data => {
